@@ -15,12 +15,12 @@ git clone https://github.com/FNALLPC-VLL/NanoGenProduction.git
 cd NanoGenProduction
 ```
 ## Event Generation
-Run VLLs2LLPs_MVLL_X_MA_X_CTAU_X_nanogen_cfg.py to generate events with nanoAOD gen-level information using the created gridpacks
+Run VLLs2LLPs_MVLL_MA_CTAU_nanogen_cfg.py to generate events with branches of nanoAOD gen-level information using the created gridpacks. Edit the mVLL, mA and ctau values at the top of the script to match your gridpack. In the example, we are generating 1000 events with mVLL=200 GeV, mA=2 GeV, and ctau=850 mm.
 ```
-Here add instructions
+cmsRun -n 6 VLLs2LLPs_MVLL_MA_CTAU_nanogen_cfg.py
 ```
 ## Check lifetime is generated correctly
-Run HistogrammerCtau.py  to generate events with nanoAOD gen-level information using the created gridpacks
+Run HistogrammerCtau.py to generate events with nanoAOD gen-level information using the created gridpacks
 ```
-Here add instructions
+python HistogrammerCtau.py --mvll 200 --ma 2 --ctau 850
 ```
